@@ -4,12 +4,8 @@ const { Schema, model } = require("mongoose");
 const taskSchema = new Schema(
   {
     title: String,
-    desciption: String,
-    task: { type: Schema.Types.ObjectId, ref: "Project" },
-  },
-  {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
-    timestamps: true,
+    description: String,
+    project: { type: Schema.Types.ObjectId, ref: "Project" },
   }
 );
 
