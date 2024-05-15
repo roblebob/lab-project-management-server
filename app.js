@@ -18,6 +18,12 @@ require("./config")(app);
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
 
+const projectsRoutes = require("./routes/projects.routes");
+app.use("/api/projects", projectsRoutes);
+
+const tasksRoutes = require("./routes/tasks.routes");
+app.use("/api/tasks", tasksRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
